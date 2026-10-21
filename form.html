@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Form permohonan layanan akademik pada prototipe Portal Layanan Akademik Universitas Pattimura.">
+  <title>Form Permohonan – Portal Layanan Akademik Universitas Pattimura</title>
+  <link rel="icon" src="img/logounpatti.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#konten-utama">Lewati ke konten utama</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <img class="logo" src="img/logounpatti.png" width="48" height="48"
+           alt="Logo Universitas Pattimura">
+      <div>
+        <p class="site-title">Portal Layanan Akademik</p>
+        <p class="site-tagline">Universitas Pattimura, Ambon</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Navigasi utama">
+    <ul class="container nav-list">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="layanan.html">Layanan</a></li>
+      <li><a href="alur.html">Alur Permohonan</a></li>
+      <li><a href="form.html" aria-current="page">Form Permohonan</a></li>
+      <li><a href="syarat.html">Syarat Dokumen</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <main id="konten-utama" tabindex="-1">
+    <section class="section" aria-labelledby="judul-form">
+      <div class="container">
+        <h1 id="judul-form">Form Permohonan Layanan</h1>
+        <p>Kolom bertanda <span class="req" aria-hidden="true">*</span> wajib diisi. Belum yakin berkas apa yang perlu disiapkan? Cek <a href="syarat.html">syarat dokumen</a>.</p>
+
+        <form class="form" action="#" method="post">
+          <div class="field">
+            <label for="nama">Nama lengkap <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="nama" name="nama" required autocomplete="name"
+                   placeholder="Contoh: Hikmah Safitri Ramadhani">
+          </div>
+
+          <div class="field">
+            <label for="nim">NIM <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="nim" name="nim" required inputmode="numeric"
+                   pattern="[0-9]{9}" maxlength="9" aria-describedby="nim-hint"
+                   placeholder="202451019">
+            <p class="hint" id="nim-hint">Tepat 9 digit angka.</p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email"
+                   aria-describedby="email-hint" placeholder="nama@email.com">
+            <p class="hint" id="email-hint">Notifikasi proses dikirim ke email ini.</p>
+          </div>
+
+          <div class="field">
+            <label for="prodi">Fakultas dan program studi <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="prodi" name="prodi" required
+                   placeholder="Contoh: FST, Ilmu Komputer">
+          </div>
+
+          <div class="field">
+            <label for="layanan-pilih">Jenis layanan <span class="req" aria-hidden="true">*</span></label>
+            <select id="layanan-pilih" name="layanan" required>
+              <option value="">– Pilih layanan –</option>
+              <option value="surat-aktif">Surat Aktif Kuliah</option>
+              <option value="transkrip">Transkrip Sementara</option>
+              <option value="cuti">Cuti Akademik</option>
+              <option value="legalisir">Legalisir Dokumen</option>
+              <option value="rekomendasi">Surat Rekomendasi Beasiswa</option>
+              <option value="penelitian">Izin Penelitian atau Observasi</option>
+              <option value="data">Perubahan Data Mahasiswa</option>
+              <option value="lainnya">Surat Keterangan Lainnya</option>
+            </select>
+          </div>
+
+          <fieldset class="field">
+            <legend>Cara pengambilan dokumen <span class="req" aria-hidden="true">*</span></legend>
+            <div class="radio-row">
+              <label class="inline"><input type="radio" name="pengambilan" value="digital" required checked> Digital (PDF via email)</label>
+              <label class="inline"><input type="radio" name="pengambilan" value="cetak"> Cetak (ambil di loket)</label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="keperluan">Keperluan <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="keperluan" name="keperluan" rows="5" required minlength="10" maxlength="500"
+                      aria-describedby="keperluan-hint"
+                      placeholder="Contoh: Untuk melengkapi berkas pendaftaran beasiswa."></textarea>
+            <p class="hint" id="keperluan-hint">10–500 karakter.</p>
+          </div>
+
+          <div class="field">
+            <label class="inline">
+              <input type="checkbox" name="setuju" required>
+              Saya menyatakan data di atas benar. <span class="req" aria-hidden="true">*</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Kirim Permohonan</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="kontak" class="site-footer">
+    <div class="container footer-inner">
+      <address>
+        Sekretariat Akademik (contoh), Universitas Pattimura, Ambon<br>
+        Email: <a href="mailto:akademik@example.ac.id">akademik@example.ac.id</a>
+      </address>
+      <p>&copy; 2026 Prototipe Portal Layanan Akademik. Dibuat oleh Hikmah S Ramadhani (202451019).</p>
+    </div>
+  </footer>
+</body>
+</html>
